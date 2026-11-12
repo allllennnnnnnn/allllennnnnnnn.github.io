@@ -2,14 +2,16 @@
 
 蝴蝶结 + 报纸 + 雪的个人主页。
 
-**线上地址：<https://allllennnnnnnn.github.io/>**  
-仓库：<https://github.com/allllennnnnnnn/allllennnnnnnn.github.io>纯静态：HTML / CSS / 一个 JS 文件，没有构建步骤，没有框架，没有第三方脚本，没有统计。
+- 线上地址：<https://allllennnnnnnn.github.io/>
+- 仓库：<https://github.com/allllennnnnnnn/allllennnnnnnn.github.io>
+
+纯静态：HTML / CSS / 一个 JS 文件，没有构建步骤，没有框架，没有第三方脚本，没有统计。
 
 ```
 index.html        页面结构（首屏 + 三块内容 + 结尾）
-style.css         全部样式（丝带、报纸质感、排版、手机适配）
-main.js           丝带滚动、全站飘雪、结尾像素雪花、复制联系方式
-img/              自制像素插画（封面 / 人像 / 图标）
+style.css         全部样式（蝴蝶结、报纸质感、排版、手机适配）
+main.js           蝴蝶结上提、全站飘雪、结尾像素雪花、复制联系方式
+img/              三张作品封面 + 图标
 fonts/            子集化字体，共约 190 KB
 tools/            生成插画的脚本（改图用）
 .nojekyll         让 GitHub Pages 原样发布，不走 Jekyll
