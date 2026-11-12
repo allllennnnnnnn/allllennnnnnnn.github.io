@@ -1,6 +1,9 @@
 # Tavia — 一个唯物主义者
 
-蓝丝带 + 报纸 + 雪的个人主页。纯静态：HTML / CSS / 一个 JS 文件，没有构建步骤，没有框架，没有第三方脚本，没有统计。
+蝴蝶结 + 报纸 + 雪的个人主页。
+
+**线上地址：<https://allllennnnnnnn.github.io/>**  
+仓库：<https://github.com/allllennnnnnnn/allllennnnnnnn.github.io>纯静态：HTML / CSS / 一个 JS 文件，没有构建步骤，没有框架，没有第三方脚本，没有统计。
 
 ```
 index.html        页面结构（首屏 + 三块内容 + 结尾）
