@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tavia — 一个唯物主义者</title>
+<meta name="description" content="Tavia（Allen / YT）的个人主页。一个唯物主义者。">
+<meta name="theme-color" content="#04101f">
+<meta property="og:title" content="Tavia — 一个唯物主义者">
+<meta property="og:description" content="A materialist. Blue ribbon, paper, and snow.">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/snow.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<noscript><p style="margin:0;padding:10px 16px;background:#10386b;color:#eaf4ff;font:12px/1.7 monospace;text-align:center">本站的丝带与雪需要 JavaScript；文字内容不受影响。The ribbon and the snow need JavaScript; the text does not.</p></noscript>
+
+<!-- 全站飘雪 -->
+<canvas id="snowfall" aria-hidden="true"></canvas>
+
+<!-- 首屏：蓝丝带 -->
+<header id="hero">
+  <div class="hero-inner">
+    <p class="hero-kicker" data-reveal>EST. 070116<span class="wide-only"> · PAPER &amp; SNOW</span></p>
+    <h1 class="hero-name" data-reveal><span class="slash">/</span>Tavia</h1>
+    <p class="hero-alias" data-reveal>ALLEN &nbsp;·&nbsp; YT</p>
+    <p class="hero-line" data-reveal>A materialist. <span class="cn">一个唯物主义者。</span></p>
+  </div>
+
+  <div class="ribbon-wrap" aria-hidden="true">
+    <svg class="ribbon" viewBox="0 0 300 1200" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="satin" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0"    stop-color="#03101d"/>
+          <stop offset=".07"  stop-color="#0b2a4e"/>
+          <stop offset=".22"  stop-color="#2a6db4"/>
+          <stop offset=".40"  stop-color="#79b4e6"/>
+          <stop offset=".50"  stop-color="#a8d2f2"/>
+          <stop offset=".60"  stop-color="#5f9fdc"/>
+          <stop offset=".78"  stop-color="#1c4f8c"/>
+          <stop offset=".92"  stop-color="#0a2745"/>
+          <stop offset="1"    stop-color="#020c17"/>
+        </linearGradient>
+        <linearGradient id="ribShade" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#01070d" stop-opacity=".75"/>
+          <stop offset=".10" stop-color="#01070d" stop-opacity=".05"/>
+          <stop offset=".86" stop-color="#01070d" stop-opacity=".05"/>
+          <stop offset="1" stop-color="#01070d" stop-opacity=".70"/>
+        </linearGradient>
+        <pattern id="weave" width="8" height="8" patternUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="1" height="8" fill="#eaf5ff" opacity=".07"/>
+        </pattern>
+      </defs>
+
+      <g class="ribbon-body">
+        <!-- 带身：底端是 V 字剪口 -->
+        <path d="M104 30 C 96 200, 112 340, 104 480 C 96 620, 110 770, 102 910
+                 C 98 1010, 106 1090, 100 1160 L 150 1122 L 200 1160
+                 C 194 1090, 202 1010, 198 910 C 190 770, 204 620, 196 480
+                 C 188 340, 204 200, 196 30 Z"
+              fill="url(#satin)"/>
+        <path d="M104 30 C 96 200, 112 340, 104 480 C 96 620, 110 770, 102 910
+                 C 98 1010, 106 1090, 100 1160 L 150 1122 L 200 1160
+                 C 194 1090, 202 1010, 198 910 C 190 770, 204 620, 196 480
+                 C 188 340, 204 200, 196 30 Z"
+              fill="url(#weave)"/>
+        <!-- 一道很薄的高光 -->
+        <path d="M143 30 C 135 200, 151 340, 143 480 C 135 620, 149 770, 141 910
+                 C 137 1010, 145 1090, 139 1160 L 150 1150 L 161 1160
+                 C 155 1090, 163 1010, 159 910 C 151 770, 165 620, 157 480
+                 C 149 340, 165 200, 157 30 Z"
+              fill="#ffffff" opacity=".13"/>
+        <!-- 上下压暗 -->
+        <path d="M104 30 C 96 200, 112 340, 104 480 C 96 620, 110 770, 102 910
+                 C 98 1010, 106 1090, 100 1160 L 150 1122 L 200 1160
+                 C 194 1090, 202 1010, 198 910 C 190 770, 204 620, 196 480
+                 C 188 340, 204 200, 196 30 Z"
+              fill="url(#ribShade)"/>
+        <!-- 顶端的一道系带 -->
+        <rect x="94" y="20" width="112" height="12" fill="#06182c"/>
+        <rect x="94" y="20" width="112" height="3" fill="#9fc8ea" opacity=".45"/>
+        <rect x="94" y="32" width="112" height="4" fill="#020c17" opacity=".55"/>
+        <!-- 缝线 -->
+        <path d="M113 30 C 105 200, 121 340, 113 480 C 105 620, 119 770, 111 910
+                 C 107 1010, 115 1090, 109 1150 L 115 1150
+                 C 121 1090, 113 1010, 117 910 C 125 770, 111 620, 119 480
+                 C 111 340, 127 200, 119 30 Z"
+              fill="#dceeff" opacity=".22"/>
+        <path d="M181 30 C 173 200, 189 340, 181 480 C 173 620, 187 770, 179 910
+                 C 175 1010, 183 1090, 177 1150 L 183 1150
+                 C 189 1090, 181 1010, 185 910 C 193 770, 179 620, 187 480
+                 C 179 340, 195 200, 187 30 Z"
+              fill="#dceeff" opacity=".22"/>
+      </g>
+    </svg>
+    <div class="ribbon-glow"></div>
+  </div>
+
+  <a class="cue" href="#about" aria-label="向下滚动">
+    <span class="cue-txt">SCROLL</span>
+    <span class="cue-arrow" aria-hidden="true"></span>
+  </a>
+</header>
+
+<main>
+
+<!-- ============ 01 关于 ============ -->
+<section class="sheet-wrap" id="about">
+  <article class="sheet" data-reveal>
+    <div class="masthead">
+      <p class="mast-kicker"><span>VOL. 01</span> · <span>NO. 070116</span><span class="wide-only"> · 蓝色号外</span></p>
+      <h2 class="masthead-title">The Tavia Times</h2>
+      <p class="mast-sub"><span>塔维亚日报</span> · <span>一个唯物主义者</span><span class="wide-only"> · A MATERIALIST</span></p>
+    </div>
+
+    <div class="dateline">
+      <span>二〇〇七年一月十六日</span>
+      <span class="dot">·</span>
+      <span>第 A1 版 · 头版</span>
+      <span class="grow"></span>
+      <span class="weather">阴，有雪 <i class="snowpip" aria-hidden="true"></i></span>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-main">
+        <p class="kicker">头版头条 · LEAD</p>
+        <h3 class="headline">一个唯物主义者</h3>
+        <p class="deck"><em>A materialist.</em></p>
+
+        <p class="byline-line">
+          <span class="by">BY</span> TAVIA <span class="sep">/</span> 又名 ALLEN · YT
+        </p>
+
+        <div class="body-copy">
+          <p class="lead-p"><span class="dropcap">物</span>质先于意识。世界是它本来的样子，不因谁的心愿而改写——这是本站唯一的主张，也是这个人的全部自我介绍。</p>
+          <p class="small-note">This page records one person, in blue ink, on paper, in winter.</p>
+        </div>
+
+        <dl class="record">
+          <div><dt>姓 名</dt><dd>Tavia</dd></div>
+          <div><dt>别 名</dt><dd>Allen &nbsp;/&nbsp; YT</dd></div>
+          <div><dt>生 日</dt><dd>2007.01.16 <span class="dim">(070116)</span></dd></div>
+          <div><dt>立 场</dt><dd>唯物主义者<span class="dim">Materialist</span></dd></div>
+        </dl>
+      </div>
+
+      <aside class="about-side">
+        <figure class="portrait">
+          <div class="portrait-frame">
+            <img src="img/portrait.svg" alt="像素风雪景：一个人与一场雪" width="360" height="450">
+          </div>
+          <figcaption>图 01 — 一个人，一场雪，一个冬天。</figcaption>
+        </figure>
+
+        <div class="stamp" aria-hidden="true">
+          <span>唯<br>物</span>
+        </div>
+
+        <p class="side-note">
+          <span class="pip"></span> 本页所用字体：思源宋体、Instrument Serif、缝合像素体。
+        </p>
+      </aside>
+    </div>
+
+    <p class="folio">A1 &nbsp;—&nbsp; THE TAVIA TIMES &nbsp;—&nbsp; 01</p>
+  </article>
+</section>
+
+<!-- ============ 02 推荐 ============ -->
+<section class="sheet-wrap" id="works">
+  <article class="sheet" data-reveal>
+    <header class="sec-head">
+      <p class="kicker">副刊 · B1</p>
+      <h2 class="sec-title">个人推荐作品</h2>
+      <p class="sec-sub">SELECTED WORKS <span class="wide-only">— 三件，图文对照</span></p>
+    </header>
+
+    <div class="clips">
+
+      <article class="clip" data-reveal>
+        <span class="tape" aria-hidden="true"></span>
+        <a class="clip-cover" href="https://book.douban.com/subject_search?search_text=%E6%82%B2%E4%BC%A4%E9%80%86%E6%B5%81%E6%88%90%E6%B2%B3" target="_blank" rel="noopener">
+          <img src="img/cover-river.svg" alt="《悲伤逆流成河》封面插图" width="600" height="840" loading="lazy">
+          <span class="cover-tag">BOOK</span>
+        </a>
+        <div class="clip-body">
+          <p class="clip-meta"><span>01 / 书</span><span>郭敬明 · 2006</span></p>
+          <h3 class="clip-title">悲伤逆流成河</h3>
+          <p class="clip-note">一条从高处逆流的河，把少年人的沉默冲成白色。</p>
+          <a class="clip-link" href="https://book.douban.com/subject_search?search_text=%E6%82%B2%E4%BC%A4%E9%80%86%E6%B5%81%E6%88%90%E6%B2%B3" target="_blank" rel="noopener">书籍页面 <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="clip clip-alt" data-reveal>
+        <span class="tape" aria-hidden="true"></span>
+        <a class="clip-cover" href="https://music.163.com/#/search/m/?s=YOASOBI%20%E3%81%9F%E3%81%B6%E3%82%93" target="_blank" rel="noopener">
+          <img src="img/cover-tabun.svg" alt="《たぶん》单曲封面插图" width="600" height="840" loading="lazy">
+          <span class="cover-tag">SONG</span>
+        </a>
+        <div class="clip-body">
+          <p class="clip-meta"><span>02 / 歌</span><span>YOASOBI · 2020</span></p>
+          <h3 class="clip-title">たぶん</h3>
+          <p class="clip-note">「たぶん」大概是，最轻的一次告别。</p>
+          <a class="clip-link" href="https://music.163.com/#/search/m/?s=YOASOBI%20%E3%81%9F%E3%81%B6%E3%82%93" target="_blank" rel="noopener">播放页面 <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+      <article class="clip" data-reveal>
+        <span class="tape" aria-hidden="true"></span>
+        <a class="clip-cover" href="https://movie.douban.com/subject_search?search_text=%E5%A4%A9%E6%B0%94%E4%B9%8B%E5%AD%90" target="_blank" rel="noopener">
+          <img src="img/cover-weathering.svg" alt="《天气之子》海报插图" width="600" height="840" loading="lazy">
+          <span class="cover-tag">FILM</span>
+        </a>
+        <div class="clip-body">
+          <p class="clip-meta"><span>03 / 影</span><span>新海诚 · 2019</span></p>
+          <h3 class="clip-title">天气之子</h3>
+          <p class="clip-note">雨下个不停，于是有人决定去把天空要回来。</p>
+          <a class="clip-link" href="https://movie.douban.com/subject_search?search_text=%E5%A4%A9%E6%B0%94%E4%B9%8B%E5%AD%90" target="_blank" rel="noopener">影片介绍 <span aria-hidden="true">↗</span></a>
+        </div>
+      </article>
+
+    </div>
+    <p class="folio">B1 &nbsp;—&nbsp; SELECTED WORKS &nbsp;—&nbsp; 02</p>
+  </article>
+</section>
+
+<!-- ============ 03 联系 ============ -->
+<section class="sheet-wrap" id="contact">
+  <article class="sheet" data-reveal>
+    <header class="sec-head">
+      <p class="kicker">广告版 · C1</p>
+      <h2 class="sec-title">了解我</h2>
+      <p class="sec-sub">LEARN ABOUT ME <span class="wide-only">— 点一下，直接复制</span></p>
+    </header>
+
+    <div class="ads">
+      <button class="ad" type="button" data-copy="ZQ_ovo07">
+        <span class="ad-k">微信 · WECHAT</span>
+        <span class="ad-v">vx. ZQ_ovo07</span>
+        <span class="ad-h">复制微信号 ↗</span>
+      </button>
+
+      <button class="ad" type="button" data-copy="1343835966">
+        <span class="ad-k">QQ</span>
+        <span class="ad-v">qq. 1343835966</span>
+        <span class="ad-h">复制 QQ 号 ↗</span>
+      </button>
+    </div>
+
+    <div class="ad-rule" aria-hidden="true"><span></span><i></i><span></span></div>
+
+    <p class="ad-foot">来信不必客套，说清事情就好。<br><em>Say what you mean. I am a materialist; I like facts.</em></p>
+
+    <p class="folio">C1 &nbsp;—&nbsp; CLASSIFIEDS &nbsp;—&nbsp; 03</p>
+  </article>
+</section>
+
+<!-- ============ 04 终章：雪 ============ -->
+<section id="finale">
+  <div class="snowflake-stage">
+    <canvas id="flake" aria-hidden="true"></canvas>
+    <p class="finale-line" data-reveal>落在蓝色之上。</p>
+    <p class="finale-sub" data-reveal>AND SNOW, EVERYWHERE &nbsp;—&nbsp; 二〇二六</p>
+  </div>
+
+  <footer class="site-foot">
+    <div class="foot-row">
+      <span class="foot-mark" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" shape-rendering="crispEdges"><rect x="7" y="1" width="2" height="14"/><rect x="1" y="7" width="14" height="2"/><rect x="4" y="4" width="2" height="2"/><rect x="10" y="4" width="2" height="2"/><rect x="4" y="10" width="2" height="2"/><rect x="10" y="10" width="2" height="2"/></svg></span>
+      <p>Tavia &nbsp;/&nbsp; Allen &nbsp;/&nbsp; YT &nbsp;·&nbsp; 一个唯物主义者</p>
+      <p class="foot-dim">070116 &nbsp;·&nbsp; BUILT IN BLUE &nbsp;·&nbsp; CC BY-NC 4.0</p>
+    </div>
+    <a class="foot-top" href="#hero">回到顶部 ↑</a>
+  </footer>
+</section>
+
+</main>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="main.js"></script>
+</body>
+</html>
